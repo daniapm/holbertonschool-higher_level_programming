@@ -5,9 +5,9 @@ def print_matrix_integer(matrix=[[]]):
             count_fila = 1
             for valor in fila:
                 if count_fila == 3:
-                    print(valor)
+                    print("{}".format(valor))
                 else:
-                    print(valor, end=" ")
+                    print("{}".format(valor), end=" ")
                 count_fila = count_fila + 1
 
     else:
