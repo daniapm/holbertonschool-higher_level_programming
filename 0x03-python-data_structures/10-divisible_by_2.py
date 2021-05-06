@@ -4,6 +4,8 @@ def divisible_by_2(my_list=[]):
         return None
     nueva = list(my_list)
     for count in nueva:
+        if count < 0:
+            count = -count
         if count % 2 == 0:
             nueva[count] = True
         else:
