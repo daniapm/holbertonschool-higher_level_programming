@@ -15,11 +15,11 @@ class Square:
     """
 
 
-def __init__(self, size):
+    def __init__(self, size):
 
-    """
-    argc:
-    size: Square size
+        """
+        argc:
+        size: Square size
 
-    """
-    self.__size = size
+        """
+        self.__size = size
