@@ -1,6 +1,26 @@
 #!/usr/bin/python3
+
+
+"""
+definition square class
+
+"""
+
+
 class Square:
-    """definition square class"""
-    def __init__(self, size):
+
+        """
+    definition class Square
+
+        """
+
+
+def __init__(self, size):
+
+        """
+    argc:
+    size: Square size
+
+        """
+
         self.__size = size
-    """Private instance attribute: size"""
