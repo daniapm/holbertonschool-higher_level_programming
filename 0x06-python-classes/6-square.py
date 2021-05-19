@@ -11,6 +11,7 @@ class Square:
 
     """
     class Private instance attribute: size
+    class Private instance attribute: position
 
     """
     def __init__(self, size=0, position=(0, 0)):
