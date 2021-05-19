@@ -11,6 +11,7 @@ class Square:
 
     """
     class Private instance attribute: size
+    class Private instance attribute: position
 
     """
     def __init__(self, size=0, position=(0, 0)):
@@ -92,14 +93,15 @@ class Square:
         argc:
         self: parametro
         Returns:
-        area: nothing
+        nothing
 
         """
+
+        if self.__size == 0:
+                print("")
         for i in range(0, self.__size):
             for b in range(0, self.__position[0]):
                 print(" ", end="")
             for a in range(0, self.__size):
                 print("#", end="")
             print("")
-        if self.__size == 0:
-                print("")
