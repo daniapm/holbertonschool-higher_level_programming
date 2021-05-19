@@ -89,6 +89,8 @@ class Square:
         """
         argc:
         self: parametro
+        Returns:
+        area: nothing
 
         """
         for i in range(0, self.__size):
