@@ -168,5 +168,7 @@ class Rectangle:
         Return: size
 
             """
-            x = Rectangle()
-            return x(size, size)
+            x = cls()
+            x.width = size
+            x.height = size
+            return x
