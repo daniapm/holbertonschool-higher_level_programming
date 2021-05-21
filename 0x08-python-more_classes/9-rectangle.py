@@ -168,4 +168,5 @@ class Rectangle:
         Return: size
 
             """
-            return Rectangle(size, size)
+            x = Rectangle()
+            return x(size, size)
