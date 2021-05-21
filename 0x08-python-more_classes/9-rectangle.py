@@ -168,6 +168,4 @@ class Rectangle:
         Return: size
 
             """
-            widt_h = size
-            heigh_t = size
-            return Rectangle(widt_h, heigh_t)
+            return Rectangle(size, size)
