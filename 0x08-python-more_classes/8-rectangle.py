@@ -151,10 +151,10 @@ class Rectangle:
 
             if rect_1.area() > rect_2.area():
                 return rect_1
-            elif rect_2.area() > rect_1.area():
-                return rect_2
             elif rect_2.area() == rect_1.area():
                 return rect_1
+            else:
+                return rect_2
             x = isintance(rect_1, Rectangle)
             if x is not instance:
                 raise TypeError("rect_1 must be an instance of Rectangle")
