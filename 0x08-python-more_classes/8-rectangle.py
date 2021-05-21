@@ -13,7 +13,7 @@ class Rectangle:
     empty class Rectangle
 
         """
-    
+
         number_of_instances = 0
         print_symbol = "#"
 
@@ -22,7 +22,7 @@ class Rectangle:
         """
         @staticmethod
         def bigger_or_equal(rect_1, rect_2):
-            
+
             if rect_1.area() > rect_2.area():
                 return rect_1
             elif rect_2.area() > rect_1.area():
@@ -110,7 +110,7 @@ class Rectangle:
             """
             area = self.__width * self.__height
             return area
-    
+
         def perimeter(self):
             """
             argc:
@@ -138,7 +138,7 @@ class Rectangle:
             for altura in range(0, self.__height):
                 for base in range(0, self.__width):
                     new_print += str(self.print_symbol)
-                if altura != self.__height -1:
+                if altura != self.__height - 1:
                     new_print += "\n"
             return (new_print)
 
