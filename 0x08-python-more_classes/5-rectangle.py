@@ -126,5 +126,14 @@ class Rectangle:
             Returns: string
 
             """
-            r = f'{self.__class__.__name__}({repr(self.__width)}, {repr(self.__height)})'
+            r = f'Rectangle({(repr(self.__width))}, {(repr(self.__height))})'
             return r
+
+        def __del__(self):
+            """
+            argc:
+            self: parametro
+            Returns: Nothing
+
+            """
+            print("Bye rectangle...")
