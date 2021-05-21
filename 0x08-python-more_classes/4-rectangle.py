@@ -126,4 +126,4 @@ class Rectangle:
             Returns: string
 
             """
-            return f'{self.__class__.__name__}({repr(self.__width)}, {repr(self.__height)})'
+            return f'Rectangle({repr(self.__width)}, {repr(self.__height)})'
