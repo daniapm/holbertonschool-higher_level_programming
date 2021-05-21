@@ -13,7 +13,7 @@ class Rectangle:
     empty class Rectangle
 
         """
-    
+
         number_of_instances = 0
         print_symbol = "#"
 
@@ -23,7 +23,7 @@ class Rectangle:
             width: Rectangle width
             height: Rectangle height
             """
-            Rectangle.number_of_instances += 1
+
             if type(height) is not int:
                 raise TypeError("height must be an integer")
             elif height < 0:
@@ -36,6 +36,8 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             else:
                 self.__width = width
+
+            Rectangle.number_of_instances += 1
 
         @property
         def height(self):
@@ -91,7 +93,7 @@ class Rectangle:
             """
             area = self.__width * self.__height
             return area
-    
+
         def perimeter(self):
             """
             argc:
@@ -119,7 +121,7 @@ class Rectangle:
             for altura in range(0, self.__height):
                 for base in range(0, self.__width):
                     new_print += str(self.print_symbol)
-                if altura != self.__height -1:
+                if altura != self.__height - 1:
                     new_print += "\n"
             return (new_print)
 
@@ -130,9 +132,9 @@ class Rectangle:
             Returns: string
 
             """
-            representacion_interpretable  = f'{self.__class__.__name__}({repr(self.__width)}, {repr(self.__height)})'
-            return representacion_interpretable
-        
+            r = 'Rectangle({:d}, {:d})'.format(self.__width, self.__height)
+            return r
+
         def __del__(self):
                 print("Bye rectangle...")
                 Rectangle.number_of_instances -= 1
