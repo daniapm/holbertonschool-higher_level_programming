@@ -22,7 +22,7 @@ class Rectangle:
             width: Rectangle width
             height: Rectangle height
             """
-            Rectangle.number_of_instances += 1
+
             if type(height) is not int:
                 raise TypeError("height must be an integer")
             elif height < 0:
@@ -35,6 +35,8 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             else:
                 self.__width = width
+
+            Rectangle.number_of_instances += 1
 
         @property
         def height(self):
@@ -140,4 +142,4 @@ class Rectangle:
 
             """
             print("Bye rectangle...")
-
+            Rectangle.number_of_instances -= 1
