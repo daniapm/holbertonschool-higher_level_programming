@@ -126,4 +126,4 @@ class Rectangle:
             Returns: string
 
             """
-            return f'Rectangle({eval(repr(self.__width))}, {eval(repr(self.__height))})'
+            return f'Rectangle({(self.__width)}, {(self.__height)})'
