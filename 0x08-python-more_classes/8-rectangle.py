@@ -17,11 +17,17 @@ class Rectangle:
         number_of_instances = 0
         print_symbol = "#"
 
-        """
-        create addNumbers static method
-        """
         @staticmethod
         def bigger_or_equal(rect_1, rect_2):
+
+            """
+
+        static metodo of class
+        argc:
+        rect_1: Rectangle width
+        rect_2: Rectangle height
+
+            """
 
             if rect_1.area() > rect_2.area():
                 return rect_1
