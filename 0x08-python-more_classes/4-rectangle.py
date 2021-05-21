@@ -126,4 +126,5 @@ class Rectangle:
             Returns: string
 
             """
-            return f'Rectangle({(self.__width)}, {(self.__height)})'
+            r = 'Rectangle({:d}, {:d})'.format(self.__width, self.__height)
+            return r
