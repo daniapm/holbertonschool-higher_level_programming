@@ -126,7 +126,7 @@ class Rectangle:
             Returns: string
 
             """
-            r = f'Rectangle({(repr(self.__width))}, {(repr(self.__height))})'
+            r = 'Rectangle({:d}, {:d})'.format(self.__width, self.__height)
             return r
 
         def __del__(self):
