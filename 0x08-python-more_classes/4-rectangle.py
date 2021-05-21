@@ -31,7 +31,7 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             else:
                 self.__width = width
-        
+
         @property
         def height(self):
             """
@@ -75,6 +75,7 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             else:
                 self.__width = value
+
         def area(self):
             """
             argc:
@@ -85,7 +86,7 @@ class Rectangle:
             """
             area = self.__width * self.__height
             return area
-    
+
         def perimeter(self):
             """
             argc:
@@ -99,3 +100,30 @@ class Rectangle:
             else:
                 perimeter = ((self.__width) * 2) + ((self.__height) * 2)
                 return perimeter
+
+        def __str__(self):
+            """
+            argc:
+            self: parametro
+            Returns: string
+
+            """
+
+            if self.__width == 0 or self.height == 0:
+                return("")
+            new_print = ""
+            for altura in range(0, self.__height):
+                for base in range(0, self.__width):
+                    new_print += "#"
+                if altura != self.__height - 1:
+                    new_print += "\n"
+            return (new_print)
+
+        def __repr__(self):
+            """
+            argc:
+            self: parametro
+            Returns: string
+
+            """
+            return f'{self.__class__.__name__}({repr(self.__width)}, {repr(self.__height)})'
