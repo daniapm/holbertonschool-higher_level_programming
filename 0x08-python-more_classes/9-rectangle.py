@@ -13,29 +13,9 @@ class Rectangle:
     empty class Rectangle
 
         """
-    
+
         number_of_instances = 0
         print_symbol = "#"
-
-        """
-        create addNumbers static method
-        """
-        @staticmethod
-        def bigger_or_equal(rect_1, rect_2):
-            
-            if rect_1.area() > rect_2.area():
-                return rect_1
-            elif rect_2.area() > rect_1.area():
-                return rect_2
-            elif rect_2.area() == rect_1.area():
-                return rect_1
-            x = isintance(rect_1, Rectangle)
-            if x is False:
-                raise TypeError("rect_1 must be an instance of Rectangle")
-            y = isintance(rect_2, Rectangle)
-            if y is False:
-                raise TypeError("rect_2 must be an instance of Rectangle")
-
 
         def __init__(self, width=0, height=0):
             """
@@ -111,7 +91,7 @@ class Rectangle:
             """
             area = self.__width * self.__height
             return area
-    
+
         def perimeter(self):
             """
             argc:
@@ -139,7 +119,7 @@ class Rectangle:
             for altura in range(0, self.__height):
                 for base in range(0, self.__width):
                     new_print += str(self.print_symbol)
-                if altura != self.__height -1:
+                if altura != self.__height - 1:
                     new_print += "\n"
             return (new_print)
 
@@ -150,9 +130,44 @@ class Rectangle:
             Returns: string
 
             """
-            representacion_interpretable  = f'{self.__class__.__name__}({repr(self.__width)}, {repr(self.__height)})'
-            return representacion_interpretable
-        
+            r = 'Rectangle({:d}, {:d})'.format(self.__width, self.__height)
+            return r
+
         def __del__(self):
                 print("Bye rectangle...")
                 Rectangle.number_of_instances -= 1
+
+        @staticmethod
+        def bigger_or_equal(rect_1, rect_2):
+
+            """
+        static metodo of class
+        argc:
+        rect_1: Rectangle width
+        rect_2: Rectangle height
+        Return: comparation of area of the rectangules
+
+            """
+            if not isinstance(rect_1, Rectangle):
+                raise TypeError("rect_1 must be an instance of Rectangle")
+            if not isinstance(rect_2, Rectangle):
+                raise TypeError("rect_2 must be an instance of Rectangle")
+            if rect_1.area() > rect_2.area():
+                return rect_1
+            elif rect_2.area() > rect_1.area():
+                return rect_2
+            else:
+                return rect_1
+
+        @classmethod
+        def square(cls, size=0):
+            """
+        metodo of class
+        argc:
+        size: Rectangle width
+        Return: size
+
+            """
+            
+
+            
