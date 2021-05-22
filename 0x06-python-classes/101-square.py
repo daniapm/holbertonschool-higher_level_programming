@@ -116,13 +116,15 @@ class Square:
 
         if self.__size == 0:
             return("")
-        new_print = ""
-        for i in range(0, self.__position[1]):
-            new_print += "\n"
-        for i in range(0, self.__size):
-            for b in range(0, self.__position[0]):
-                new_print += " "
-            for a in range(0, self.__size):
-                new_print += "#"
-            new_print += "\n"
-        return new_print
+        else:
+            new_print = ""
+            for m in range(0, self.__position[1]):
+                new_print += "\n"
+            for i in range(0, self.__size):
+                for b in range(0, self.__position[0]):
+                    new_print += (" ")
+                for a in range(0, self.__size):
+                    new_print += "#"
+                if (i != self.__size - 1):
+                    new_print += "\n"
+            return new_print
