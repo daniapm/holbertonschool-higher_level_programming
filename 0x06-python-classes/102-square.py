@@ -19,8 +19,8 @@ class Square:
         size: Square size
 
         """
-        if type(size) is not int or type(size) is not float:
-            raise TypeError("size must be a number")
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
@@ -41,9 +41,9 @@ class Square:
         size: Square size
 
         """
-        if type(size) is not int or type(size) is not float:
-            raise TypeError("size must be a number")
-        elif size < 0:
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
