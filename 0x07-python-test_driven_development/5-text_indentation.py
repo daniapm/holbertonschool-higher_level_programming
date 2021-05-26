@@ -15,38 +15,40 @@ def text_indentation(text):
 
     for i in range(len(text)):
         identification = ['.', '?', ':']
-    idx = 0
+    count = 0
     for items in text:
         if items in (identification):
-            if text[idx + 1] == " ":
-                text = text[:idx + 1] + text[idx + 2:]
+            if text[count + 1] == " ":
+                text = text[:count + 1] + text[count + 2:]
         else:
-            idx += 1
-    idx = 0
+            count += 1
+    count = 0
     for items in text:
         if items in identification:
             if items == '.':
                 text = text.replace('.', '.\n\n')
                 break
-            idx = 3
+            count = 3
         else:
-            idx += 1
-    idx = 0
+            count += 1
+    count = 0
     for items in text:
         if items in identification:
             if items == '?':
                 text = text.replace('?', '?\n\n')
                 break
-            idx = 3
+            count = 3
         else:
-            idx += 1
-    idx = 0
+            count += 1
+    count = 0
     for items in text:
         if items in identification:
             if items == ':':
                 text = text.replace(':', ':\n\n')
                 break
-            idx = 3
+            count = 3
         else:
-            idx += 1
+            count += 1
     print(text, end="")
+    if text is "\n":
+        print("\n")
