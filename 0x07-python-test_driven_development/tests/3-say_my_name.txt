@@ -1,0 +1,40 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Ana", "Puertas")
+My name is Ana Puertas
+>>> say_my_name("Ana", 5)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> say_my_name(5, "Herrera")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name("Natalia")
+My name is Natalia 
+>>> say_my_name("")
+My name is  
+>>> say_my_name("", "")
+My name is  
+>>> say_my_name([1, 2, 3,4], "Correa")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name(, "Nata")
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+>>> say_my_name(None, "Nata")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name("Nata", None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> from os import system
+>>> system("pep8 3-say_my_name.py")
+0
+>>> len(__import__("3-say_my_name").say_my_name.__doc__) > 0
+True
+>>> len(__import__("3-say_my_name").__doc__) > 0
+True
