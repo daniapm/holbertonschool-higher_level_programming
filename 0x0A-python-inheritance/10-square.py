@@ -26,4 +26,4 @@ class Square(Rectangle):
         Public instance method area
         Return: Regtangule area
         """
-        return self.__size ** 2
+        return self.__size * self.__size
