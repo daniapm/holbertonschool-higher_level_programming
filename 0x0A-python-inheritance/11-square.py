@@ -96,4 +96,4 @@ class Square(Rectangle):
         Public instance method str
         Return: str area
         """
-        return ("[Square] {}\{}".format(self.__size, self.__size))
+        return ("[Square] {}/{}".format(self.__size, self.__size))
