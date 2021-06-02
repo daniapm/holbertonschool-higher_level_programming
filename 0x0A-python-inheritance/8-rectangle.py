@@ -4,7 +4,7 @@ Documentation for BaseGeometty class empy
 """
 
 
-class BaseGeometry():
+class BaseGeometry:
     """
     BaseGeometty class
     """
@@ -45,7 +45,7 @@ class Rectangle(BaseGeometry):
         width: width of the Rectangule
         height: heigth of the Rectangule
         """
-        self.__width = width
-        self.__height = height
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
