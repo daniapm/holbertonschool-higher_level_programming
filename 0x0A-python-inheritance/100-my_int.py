@@ -12,10 +12,10 @@ class MyInt(int):
         """
         operator to compare ne
         """
-        return int(self) != other
+        return True
 
     def __eq__(self, other):
         """
         operator to compare eq
         """
-        return int(self) == other
+        return False
