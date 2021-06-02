@@ -61,4 +61,4 @@ class Rectangle(BaseGeometry):
         Public instance method str
         Return: str area
         """
-        return ("[Rectangle] {}\{}".format(self.__width, self.__height))
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
