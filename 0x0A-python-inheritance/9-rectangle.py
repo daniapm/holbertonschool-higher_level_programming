@@ -28,6 +28,10 @@ class BaseGeometry():
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+"""
+Documentation for Rectangule class
+"""
+
 
 class Rectangle(BaseGeometry):
     """
