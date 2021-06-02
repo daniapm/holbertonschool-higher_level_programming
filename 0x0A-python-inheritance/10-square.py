@@ -62,6 +62,12 @@ class Rectangle(BaseGeometry):
         """
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
+
+"""
+Documentation for Square class
+"""
+
+
 class Square(Rectangle):
     """
     Square class
