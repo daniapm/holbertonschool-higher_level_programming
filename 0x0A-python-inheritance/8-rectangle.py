@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Documentation for BaseGeometty class empy
+Documentation for BaseGeometty class
 """
 
 
@@ -11,7 +11,6 @@ class BaseGeometry:
     def area(self):
         """
         Public instance method area
-        Return: Exception with message
         """
         raise Exception("area() is not implemented")
 
@@ -42,8 +41,8 @@ class Rectangle(BaseGeometry):
         """
         Instantiation with width and heigth
         argc:
-        width: width of the Rectangule
-        height: heigth of the Rectangule
+            width: width of the Rectangule
+            height: heigth of the Rectangule
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
