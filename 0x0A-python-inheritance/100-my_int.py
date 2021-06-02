@@ -10,12 +10,12 @@ class MyInt(int):
     """
     def __ne__(self, other):
         """
-        MyInt class
+        operator to compare ne
         """
         return int(self) != other
 
     def __eq__(self, other):
         """
-        MyInt class
+        operator to compare eq
         """
         return int(self) == other
