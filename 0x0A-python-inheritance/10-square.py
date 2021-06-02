@@ -62,7 +62,7 @@ class Rectangle(BaseGeometry):
         Public instance method str
         Return: str area
         """
-        return ("[Rectangle] {}\{}".format(self.__width, self.__height))
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
 
 """
@@ -80,9 +80,8 @@ class Square(Rectangle):
         argc:
         size: size of the Square
         """
-
-        self.__size = size
         self.integer_validator("size", size)
+        self.__size = size
 
     def area(self):
         """
