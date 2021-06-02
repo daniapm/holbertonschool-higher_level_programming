@@ -18,8 +18,8 @@ class BaseGeometry:
         """
         Public instance method integer_validator
         argc:
-        name: always a string
-        value: validates value
+            name: always a string
+            value: validates value
         Return: Exception with message
         """
         if type(value) is not int:
