@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Documentation for a class instance that return true or false
+Documentation for instance that return true or false
 """
 
 
