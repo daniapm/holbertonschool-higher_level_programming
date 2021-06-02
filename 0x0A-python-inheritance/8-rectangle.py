@@ -29,6 +29,11 @@ class BaseGeometry():
             raise ValueError("{} must be greater than 0".format(name))
 
 
+"""
+Documentation for BaseGeometty class empy
+"""
+
+
 class Rectangle(BaseGeometry):
     """
     Rectangle class
@@ -41,6 +46,6 @@ class Rectangle(BaseGeometry):
         height: heigth of the Rectangule
         """
         self.integer_validator("width", width)
-        self.integer_validator("height", height)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
