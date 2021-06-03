@@ -2,9 +2,6 @@
 """Documentation for a class_to_json function"""
 
 
-import json
-
-
 def class_to_json(obj):
     """ function that returns the dictionary description with simple data structure
     Args:
