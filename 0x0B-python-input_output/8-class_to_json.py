@@ -6,10 +6,8 @@ import json
 
 
 def class_to_json(obj):
-    """ function that writes an Object to a text file, using a JSON representation
+    """ function that returns the dictionary description with simple data structure
     Args:
         my_obj: object
-        filename: text file
     """
-    m = json.dumps(obj.__dict__)
-    return m
+    return (obj.__dict__)
