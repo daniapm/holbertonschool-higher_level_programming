@@ -56,7 +56,6 @@ class Base:
         else:
             with open(filename, "w") as file:
                 file.write(Base.to_json_string(dictionaries))
-        
 
     @staticmethod
     def from_json_string(json_string):
