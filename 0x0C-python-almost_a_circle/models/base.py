@@ -53,6 +53,10 @@ class Base:
                 dictionaries.append(list.to_dictionary())
             with open(filename, "w") as file:
                 file.write(Base.to_json_string(dictionaries))
+        else:
+            with open(filename, "w") as file:
+                file.write(Base.to_json_string(dictionaries))
+        
 
     @staticmethod
     def from_json_string(json_string):
