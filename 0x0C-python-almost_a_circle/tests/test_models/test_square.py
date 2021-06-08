@@ -5,8 +5,9 @@ import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+from io import StringIO
 import sys
-
+from unittest.mock import patch
 
 
 class Tests_class_(unittest.TestCase):

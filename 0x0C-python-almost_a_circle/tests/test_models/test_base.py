@@ -23,8 +23,8 @@ class Tests_class_Base(unittest.TestCase):
         self.assertEqual(b1.id, 12)
         b2 = Base()
         self.assertEqual(b2.id, 1)
-        b3 = Base(["list", 1, 4.7])
-        self.assertEqual(b3.id, ["list", 1, 4.7])
+        b3 = Base(["list", 1])
+        self.assertEqual(b3.id, ["list", 1])
         b4 = Base(None)
         self.assertEqual(b4.id, 2)
 
@@ -52,6 +52,11 @@ class Tests_class_Base(unittest.TestCase):
         d3 = None
         self.assertCountEqual(Base.to_json_string(d3), '[]')
         self.assertTrue(type(Base.to_json_string(None)) is str)
+        d4 = [{"x": 5}]
+        self.assertCountEqual(Base.to_json_string(d4), '[{"x": 5}]')
+        d5 = 1234
+        self.assertCountEqual(Base.to_json_string(d5), '1234')
+        
 
     def tests_from_json_string(self):
         """
