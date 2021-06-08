@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-from models.base import Base
-from sys import argv
 """
 Documentation for Rectangle class empy
 """
+
+
+from models.base import Base
+from sys import argv
 
 
 class Rectangle(Base):
