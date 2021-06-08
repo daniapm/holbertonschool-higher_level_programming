@@ -10,7 +10,7 @@ import sys
 from unittest.mock import patch
 
 
-class Tests_class_(unittest.TestCase):
+class TestSquare(unittest.TestCase):
     def setUp(self):
         """
         Reset the nb_objects

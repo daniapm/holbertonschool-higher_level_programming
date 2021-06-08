@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-class Tests_class_Base(unittest.TestCase):
+class TestBase(unittest.TestCase):
 
     def setUp(self):
         """
@@ -58,7 +58,7 @@ class Tests_class_Base(unittest.TestCase):
         self.assertCountEqual(Base.to_json_string(d5), '1234')
         
 
-    def tests_from_json_string(self):
+    def test_from_json_string(self):
         """
         check list of the JSON string representation
         """
@@ -71,7 +71,7 @@ class Tests_class_Base(unittest.TestCase):
         self.assertEqual([], Base.from_json_string(""))
         self.assertEqual([], Base.from_json_string(None))
 
-    def tests_create(self):
+    def test_create(self):
         """
         check instance with all attributes already
         """
@@ -84,7 +84,7 @@ class Tests_class_Base(unittest.TestCase):
         s1 = Square.create(**s1_dictionary)
         self.assertNotEqual(s, s1)
 
-    def tests_load_from_file(self):
+    def test_load_from_file(self):
         """
         check list of instances
         """
