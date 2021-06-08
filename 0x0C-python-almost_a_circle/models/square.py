@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """
 Documentation for Base class empy
 """
+
+
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
