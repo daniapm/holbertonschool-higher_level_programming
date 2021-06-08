@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-import json
-import os
 """
 Documentation for Base class empy
 """
+
+
+import json
+import os
 
 
 class Base:
