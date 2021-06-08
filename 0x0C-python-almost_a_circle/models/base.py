@@ -6,6 +6,7 @@ Documentation for Base class empy
 
 import json
 import os
+import csv
 
 
 class Base:
@@ -86,6 +87,8 @@ class Base:
                 dum = cls(1, 0)
             dum.update(**dictionary)
             return dum
+        else:
+            return None
 
     @classmethod
     def load_from_file(cls):
