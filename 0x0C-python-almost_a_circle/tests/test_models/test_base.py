@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+class test of the base
+"""
+
+
 import unittest
 import json
 import os
@@ -5,10 +11,6 @@ import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
-
-"""
-class test of the base
-"""
 
 
 class TestBase(unittest.TestCase):

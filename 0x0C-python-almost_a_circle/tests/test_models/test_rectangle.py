@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+class test of the base
+"""
+
+
 import unittest
 import json
 import os
@@ -8,12 +14,6 @@ from models.square import Square
 from io import StringIO
 import sys
 from unittest.mock import patch
-
-
-"""
-class test of the base
-"""
-
 
 class TestRectangle(unittest.TestCase):
     """Tests the Square class"""
