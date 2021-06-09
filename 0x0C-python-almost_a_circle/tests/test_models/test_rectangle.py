@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-class test of the base
+Documentation for Rectangle class empy
 """
 
 
@@ -14,6 +14,12 @@ from models.square import Square
 from io import StringIO
 import sys
 from unittest.mock import patch
+
+
+"""
+class test of the base
+"""
+
 
 class TestRectangle(unittest.TestCase):
     """Tests the Square class"""
@@ -56,7 +62,6 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(2, 10)
         self.assertEqual(r2.area(), 20)
         r3 = Rectangle(8, 7, 0, 0, 12)
-        print(r3.area(), 56)
         r4 = Rectangle(33, 22)
         self.assertEqual(r4.area(), 726)
         r5 = Rectangle(222, 100)
