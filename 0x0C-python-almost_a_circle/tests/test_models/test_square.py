@@ -10,6 +10,11 @@ import sys
 from unittest.mock import patch
 
 
+"""
+class test of the Square
+"""
+
+
 class TestSquare(unittest.TestCase):
     def setUp(self):
         """
@@ -18,6 +23,9 @@ class TestSquare(unittest.TestCase):
         Base._Base__nb_objects = 0
     
     def test_increment_id_Rectangule(self):
+        """
+        test check id
+        """
         r1 = Square(10, 2)
         self.assertEqual(r1.id, 1)
         r2 = Square(2)
@@ -28,6 +36,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r3.id, 9)
     
     def test_size_Rectangule(self):
+        """
+        Test check size
+        """
         r1 = Square(10, 2)
         self.assertEqual(r1.size, 10)
         r2 = Square(2)
@@ -38,6 +49,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r3.size, 5)
 
     def test_exepc(self):
+        """
+        Test check error
+        """
         with self.assertRaises(TypeError):
             s3 = Square(9.2, 2.8)
             s4 = Square(None)
@@ -62,6 +76,9 @@ class TestSquare(unittest.TestCase):
             s4 = Square(9, 9, -5)
 
     def test_create_square(self):
+        """
+        Test create square
+        """
         s1 = Square(5, 3, 2, 2)
         s2 = Square(5, 3, 2, 2)
         s3 = Square(10)
@@ -79,6 +96,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s3.y, 0)
     
     def test_update(self):
+        """
+        Test update
+        """
         s1 = Square(5)
         self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 5")
         s1.update(10)
@@ -100,6 +120,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.__str__(), "[Square] (2) 0/0 - 5")
 
     def test_to_dictionary(self):
+        """
+        Test dictionary square
+        """
         s1 = Square(10, 2, 1)
         s2 = s1.to_dictionary()
         self.assertEqual(s2.__str__(), "{'id': 1, 'x': 2, 'size': 10, 'y': 1}")
@@ -111,6 +134,9 @@ class TestSquare(unittest.TestCase):
         self.assertNotEqual(s1, s3)
 
     def test_update_excep(self):
+        """
+        Test check error
+        """
         s = Square(5, 8, 1, 3)
         with self.assertRaises(ValueError):
             s.update(5, 3, -1)
@@ -123,9 +149,15 @@ class TestSquare(unittest.TestCase):
             s.update(5, 3, 9, "estas")
 
     def test_pep8_base(self):
+        """
+        Test check pep8 style
+        """
         self.assertEqual(os.system('pep8 models/square.py'), 0)
 
     def test_module_docstring(self):
+        """
+        Test check documentation
+        """
         self.assertTrue(len(Square.__doc__) >= 1)
         self.assertTrue(len(Square.__init__.__doc__) >= 1)
         self.assertTrue(len(Square.__str__.__doc__) >= 1)
@@ -133,6 +165,8 @@ class TestSquare(unittest.TestCase):
         self.assertTrue(len(Square.to_dictionary.__doc__) >= 1)
 
     def test_name_file(self):
+        """name file size
+        """
         self.assertTrue(hasattr(Square, "__init__"))
         self.assertTrue(hasattr(Square, "__str__"))
         self.assertTrue(hasattr(Square, "update"))
