@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-"""
-Documentation for Rectangle class empy
-"""
-
-
 import unittest
 import json
 import os
@@ -15,33 +10,17 @@ from io import StringIO
 import sys
 from unittest.mock import patch
 
-
-"""
-class test of the base
-"""
-
-
 class TestRectangle(unittest.TestCase):
-    """Tests the Square class"""
     def setUp(self):
-        """
-        Reset the nb_objects
-        """
         Base._Base__nb_objects = 0
 
     def tests_increment_id_Rectangule(self):
-        """
-        Test check the id
-        """
         r1 = Rectangle(10, 2)
         self.assertEqual(r1.id, 1)
         r2 = Rectangle(2, 10)
         self.assertEqual(r2.id, 2)
 
     def tests_exepc(self):
-        """
-        Test check error
-        """
         with self.assertRaises(TypeError):
             r3 = Rectangle(9.2, 2.8)
             r4 = Rectangle(None)
@@ -54,9 +33,6 @@ class TestRectangle(unittest.TestCase):
             r11 = Rectangle(10, 2, "3", 1)
 
     def tests_area(self):
-        """
-        Test check the area
-        """
         r1 = Rectangle(3, 2)
         self.assertEqual(r1.area(), 6)
         r2 = Rectangle(2, 10)
@@ -71,9 +47,6 @@ class TestRectangle(unittest.TestCase):
             self.r.area(1)
 
     def test_display(self):
-        """
-        Test display Rectangle
-        """
         r1 = Rectangle(4, 6)
         r2 = Rectangle(2, 2)
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
@@ -85,9 +58,6 @@ class TestRectangle(unittest.TestCase):
                              '##\n##\n')
     
     def test_display_x_and_y(self):
-        """
-        Test display Rectangle
-        """
         r1 = Rectangle(2, 3, 2, 2)
         r2 = Rectangle(3, 2, 1, 0)
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
@@ -99,9 +69,6 @@ class TestRectangle(unittest.TestCase):
                              ' ###\n ###\n')
 
     def test_str(self):
-        """
-        Test representacion string Rectangle
-        """
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(r1.__str__(), '[Rectangle] (12) 2/1 - 4/6')
         r2 = Rectangle(5, 5, 1)
@@ -110,9 +77,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r3.__str__(), '[Rectangle] (hola) 0/0 - 5/3')
 
     def tests_update(self):
-        """
-        Test updare rectangle
-        """
         r1 = Rectangle(10, 10, 10, 10)
         self.assertEqual(r1.__str__(), '[Rectangle] (1) 10/10 - 10/10')
         r1.update(None)
@@ -140,9 +104,6 @@ class TestRectangle(unittest.TestCase):
 
 
     def test_update_excep(self):
-        """
-        Test display Rectangle error
-        """
         r1 = Rectangle(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             r1.update(width="10")
@@ -157,18 +118,12 @@ class TestRectangle(unittest.TestCase):
             r1.update(height=0)
 
     def tests_update_value_error(self):
-        """
-        Test display Rectangle error
-        """
         r1 = Rectangle(10, 10, 10, 10)
         with self.assertRaises(ValueError):
             r1.update(**{'id': 1337, 'x': -1})
             r1.update("stringid", None, None)
 
     def tests_to_dictionary(self):
-        """
-        Test dictionary
-        """
         r1 = Rectangle(10, 2, 1, 9)
         r1_dictionary = {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
         self.assertIs(type(r1.to_dictionary()), dict)
@@ -178,15 +133,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.__str__(), "[Rectangle] (1) 1/9 - 10/2")
 
     def test_pep8_base(self):
-        """
-        Test check pep8 style
-        """
         self.assertEqual(os.system('pep8 models/rectangle.py'), 0)
 
     def test_module_docstring(self):
-        """
-        Test check the documentation
-        """
         self.assertTrue(len(Rectangle.__doc__) >= 1)
         self.assertTrue(len(Rectangle.__init__.__doc__) >= 1)
         self.assertTrue(len(Rectangle.area.__doc__) >= 1)
@@ -196,9 +145,6 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(len(Rectangle.to_dictionary.__doc__) >= 1)
 
     def test_name_file(self):
-        """
-        Test check the name file
-        """
         self.assertTrue(hasattr(Rectangle, "__init__"))
         self.assertTrue(hasattr(Rectangle, "area"))
         self.assertTrue(hasattr(Rectangle, "display"))
@@ -206,6 +152,5 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(hasattr(Rectangle, "update"))
         self.assertTrue(hasattr(Rectangle, "to_dictionary"))
    
-
 if __name__ == '__main__':
     unittest.main()

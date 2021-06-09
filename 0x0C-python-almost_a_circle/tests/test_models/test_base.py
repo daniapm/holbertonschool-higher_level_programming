@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-"""
-class test of the base
-"""
-
-
 import unittest
 import json
 import os
@@ -16,15 +11,9 @@ from models.square import Square
 class TestBase(unittest.TestCase):
 
     def setUp(self):
-        """
-        Reset nb_objects
-        """
         Base._Base__nb_objects = 0
 
     def test_base_id(self):
-        """
-        check id
-        """
         b1 = Base(12)
         self.assertEqual(b1.id, 12)
         b2 = Base()
@@ -35,9 +24,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b4.id, 2)
 
     def test_objects_error(self):
-        """
-        check error en object
-        """
         b = Base(3)
         with self.assertRaises(AttributeError):
             print(b.nb_objects)
@@ -45,9 +31,6 @@ class TestBase(unittest.TestCase):
             print(b.__nb_objects)
 
     def test_to_json_string(self):
-        """
-        check JSON string representation
-        """
         d1 = [{'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}]
         self.assertCountEqual(Base.to_json_string(d1), '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]')
         d2 = [{"numero1": 5, "numero2": 1}]
@@ -65,9 +48,6 @@ class TestBase(unittest.TestCase):
         
 
     def test_from_json_string(self):
-        """
-        check list of the JSON string representation
-        """
         string = '[{"height": 4, "width": 10, "id": 89}, {"height": 7, "width": 1, "id": 7}]'
         j_son = Base.from_json_string(string)
         self.assertTrue(type(j_son) is list)
@@ -78,9 +58,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual([], Base.from_json_string(None))
 
     def test_create(self):
-        """
-        check instance with all attributes already
-        """
         d = Rectangle(3, 5, 1)
         d1_dictionary = d.to_dictionary()
         d1 = Rectangle.create(**d1_dictionary)
@@ -91,9 +68,6 @@ class TestBase(unittest.TestCase):
         self.assertNotEqual(s, s1)
 
     def test_load_from_file(self):
-        """
-        check list of instances
-        """
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
         r3 = [r1, r2]
@@ -108,16 +82,10 @@ class TestBase(unittest.TestCase):
         self.assertEqual(lso[0].__str__(), '[Square] (5) 0/0 - 5')
 
     def test_b_inst(self):
-        """
-        check instances
-        """
         b = Base()
         self.assertIsInstance(b, Base)
 
     def test_save_to_file(self):
-        """
-        check JSON string representation
-        """
         R_1 = Rectangle(10, 7, 2, 8)
         R_2 = Rectangle(2, 4)
         Rectangle.save_to_file([R_1, R_2])
@@ -128,15 +96,9 @@ class TestBase(unittest.TestCase):
         self.assertTrue(os.path.isfile('Square.json'))
 
     def test_pep8_base(self):
-        """
-        check pep8 file
-        """
         self.assertEqual(os.system('pep8 models/base.py'), 0)
 
     def test_module_docstring(self):
-        """
-        check documentation file
-        """
         self.assertTrue(len(Base.__doc__) >= 1)
         self.assertTrue(len(Base.__init__.__doc__) >= 1)
         self.assertTrue(len(Base.create.__doc__) >= 1)
@@ -146,9 +108,6 @@ class TestBase(unittest.TestCase):
         self.assertTrue(len(Base.load_from_file.__doc__) >= 1)
 
     def test_name_file(self):
-        """
-        check name file
-        """
         self.assertTrue(hasattr(Base, "__init__"))
         self.assertTrue(hasattr(Base, "create"))
         self.assertTrue(hasattr(Base, "to_json_string"))
