@@ -1,2 +1,2 @@
--- List databases
-CREATE DATABASE hbtn_0c_0
+--  Create a database
+CREATE DATABASE hbtn_0c_0;
