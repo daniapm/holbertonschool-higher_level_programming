@@ -3,7 +3,7 @@
 if (process.argv.length === 2 || process.argv.length === 3) {
   console.log('0');
 } else {
-  const num = parseInt(process.argv.sort());
-  const second = parseInt(num.reverse());
+  const num = process.argv.sort();
+  const second = num.reverse();
   console.log(parseInt(second[1]));
 }
