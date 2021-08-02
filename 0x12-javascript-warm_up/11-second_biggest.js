@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//  script that prints the addition of 2 integers
+//  script script that searches the second biggest integer in the list of arguments.
 if (process.argv.length === 2 || process.argv.length === 3) {
   console.log(0);
 } else {
