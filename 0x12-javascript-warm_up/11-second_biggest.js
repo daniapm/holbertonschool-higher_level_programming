@@ -4,6 +4,5 @@ if (process.argv.length <= 3) {
   console.log(0);
 } else {
   const num = process.argv.sort();
-  const second = num.reverse();
-  console.log(parseInt(second[1]));
+  console.log(num.reverse()[1]);
 }
