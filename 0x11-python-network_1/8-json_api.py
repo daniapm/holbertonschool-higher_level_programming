@@ -9,6 +9,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
+
     if len(argv) == 2:
         response = requests.post("http://0.0.0.0:5000/search_user",
                                  data={'q': argv[1]})
