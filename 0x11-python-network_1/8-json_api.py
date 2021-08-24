@@ -14,7 +14,8 @@ if __name__ == "__main__":
         response = requests.post("http://0.0.0.0:5000/search_user",
                                  data={'q': argv[1]})
     else:
-        response = requests.post("http://0.0.0.0:5000/search_user", data={'q': ""})
+        response = requests.post("http://0.0.0.0:5000/search_user",
+                                 data={'q': ""})
     try:
         dataj = response.json()
         if dataj:
