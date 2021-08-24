@@ -11,8 +11,5 @@ if __name__ == "__main__":
     response = requests.get('https://api.github.com/users/{}'.format(argv[1]),
                             auth=HTTPBasicAuth(argv[1], argv[2]))
 
-    try:
-        data = response.json()
-        print(data["id"])
-    except:
-        print("None")
+    data = response.json()
+    print(data["id"])
