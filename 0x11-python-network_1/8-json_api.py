@@ -10,16 +10,15 @@ import sys
 
 if __name__ == "__main__":
     params = ""
-    if len(sys.argv) == 1:
+    if len(sys.argv) < 2:
         params = ""
     else:
         params = sys.argv[1]
-    response = requests.post("http://0.0.0.0:5000/search_user",
-                             data={"q": params})
     try:
-        data = response.json()
-        if (data):
-            print("[{}] {} ".format(response['id'], response['name']))
+        response = requests.post("http://0.0.0.0:5000/search_user",
+                                 data={'q': params}).json()
+        if ("name" in respose) and ("id" in response):
+            print("[{}] {}".format(response['id'], response['name']))
         else:
             print("No result")
     except:
