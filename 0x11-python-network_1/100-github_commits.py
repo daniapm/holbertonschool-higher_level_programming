@@ -17,4 +17,4 @@ if __name__ == '__main__':
     for commit in firt_ten:
         comm = commit.get('sha')
         print(comm, end=': ')
-        print(commit.get('commit').get('author').get('name '))
+        print(commit.get('commit').get('author').get('name'))
