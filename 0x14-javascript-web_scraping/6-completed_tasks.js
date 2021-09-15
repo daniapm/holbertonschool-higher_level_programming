@@ -8,13 +8,13 @@ request(process.argv[2], function (error, response, body) {
     const dict_task = {};
     const users = (JSON.parse(body));
     for (let i = 0; i < users.length; ++i) {
-      const userId = users[i].userId;
+      const user_Id = users[i].userId;
       const completed = users[i].completed;
-      if (!dict_task[userId]) {
-        dict_task[userId] = 0;
+      if (completed) {
+        dict_task[user_Id] = 0;
       }
       if (completed) {
-        dict_task[userId]++;
+        dict_task[user_Id]++;
       }
     }
     console.log(dict_task);
