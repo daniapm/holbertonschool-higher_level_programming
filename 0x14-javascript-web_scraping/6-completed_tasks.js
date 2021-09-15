@@ -10,8 +10,8 @@ request(process.argv[2], function (error, response, body) {
     for (let i = 0; i < users.length; ++i) {
       const userId = users[i].userId;
       const completed = users[i].completed;
-      if (completed) {
-        dicttask[userId] = 1;
+      if (dicttask[userId] == null && completed === true) {
+        dicttask[userId] = 0;
       }
       if (completed) {
         dicttask[userId]++;
