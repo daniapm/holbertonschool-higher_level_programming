@@ -5,7 +5,7 @@ request(('https://swapi-api.hbtn.io/api/films/' + process.argv[2]), function (er
   if (error) {
     console.log(error);
   } else if (response.statusCode === 200) {
-    const results = (JSON.parse(body).characters);
+    const results = (JSON.parse(body).characters).sort();
     for (let i = 0; i < results.length; i++) {
       request(results[i], function (error, response, body) {
         if (error) {
