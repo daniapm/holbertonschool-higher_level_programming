@@ -5,18 +5,18 @@ request(process.argv[2], function (error, response, body) {
   if (error) {
     console.log(error);
   } else if (response.statusCode === 200) {
-    const dict_task = {};
+    const dicttask = {};
     const users = (JSON.parse(body));
     for (let i = 0; i < users.length; ++i) {
-      const user_Id = users[i].userId;
+      const userId = users[i].userId;
       const completed = users[i].completed;
       if (completed) {
-        dict_task[user_Id] = 0;
+        dicttask[userId] = 1;
       }
       if (completed) {
-        dict_task[user_Id]++;
+        dicttask[userId]++;
       }
     }
-    console.log(dict_task);
+    console.log(dicttask);
   }
 });
