@@ -4,5 +4,5 @@ let element = document.getElementById("red_header");
 element.addEventListener("click", clikear);
 
 function clikear() {
-      document.getElementById("red_header").style.color= "red";
+      $('header').css('color', 'red');
 }
